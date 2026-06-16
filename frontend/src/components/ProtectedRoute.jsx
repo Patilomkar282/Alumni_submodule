@@ -9,7 +9,7 @@ const ProtectedRoute = () => {
     const isAdminPath = path.startsWith('/admin');
 
     if (!userInfo) {
-        window.location.href = 'https://www.smartprep.live/login';
+        window.location.href = 'https://smartprep.live/login';
         return null;
     }
 

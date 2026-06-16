@@ -422,7 +422,7 @@ export default function Header() {
         localStorage.removeItem('token');
         setUser(null);
         setIsMobileMenuOpen(false);
-        window.location.href = 'https://www.smartprep.live/login';
+        window.location.href = 'https://smartprep.live/login';
     };
 
     // Student Navigation Items
@@ -659,7 +659,7 @@ export default function Header() {
                             <div className="hidden sm:flex flex-col justify-center items-center h-full px-2">
                                 <div className="flex items-center space-x-2">
                                      <button
-                                         onClick={() => window.location.href = 'https://www.smartprep.live/login'}
+                                         onClick={() => window.location.href = 'https://smartprep.live/login'}
                                          className="text-[#C7D1D8] hover:bg-[#ffffff1a] hover:text-white px-3 py-1.5 rounded font-semibold text-sm transition-colors"
                                      >
                                          Sign in
@@ -749,7 +749,7 @@ export default function Header() {
                             ) : (
                                 <div className="space-y-4 pt-4 pb-2 flex flex-col px-4">
                                     <button
-                                        onClick={() => { window.location.href = 'https://www.smartprep.live/login'; setIsMobileMenuOpen(false); }}
+                                        onClick={() => { window.location.href = 'https://smartprep.live/login'; setIsMobileMenuOpen(false); }}
                                         className="w-full text-center py-2.5 rounded-full border border-white text-white font-semibold transition-colors"
                                     >
                                         Sign in

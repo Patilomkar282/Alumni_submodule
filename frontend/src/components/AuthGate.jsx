@@ -20,7 +20,7 @@ export default function AuthGate() {
       }
 
       if (!token) {
-        window.location.href = 'https://www.smartprep.live/login';
+        window.location.href = 'https://smartprep.live/login';
         return;
       }
 
@@ -54,7 +54,7 @@ export default function AuthGate() {
         console.error('Authentication Error:', err);
         localStorage.removeItem('token');
         localStorage.removeItem('userInfo');
-        window.location.href = 'https://www.smartprep.live/login';
+        window.location.href = 'https://smartprep.live/login';
       }
     };
 
@@ -68,7 +68,7 @@ export default function AuthGate() {
           <h2 className="text-xl font-bold text-red-600 mb-2">Authentication Error</h2>
           <p className="text-gray-600 mb-4">{error}</p>
           <button 
-            onClick={() => window.location.href = 'https://www.smartprep.live/login'}
+            onClick={() => window.location.href = 'https://smartprep.live/login'}
             className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
           >
             Return to Login
