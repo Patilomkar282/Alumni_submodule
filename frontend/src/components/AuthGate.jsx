@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function AuthGate() {
@@ -26,7 +26,7 @@ export default function AuthGate() {
 
       try {
         // 2. Fetch full user info from Alumni Backend
-        const res = await fetch('http://localhost:5001/api/users/profile', {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/profile`, {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         
