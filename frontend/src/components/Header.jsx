@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+﻿import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     User,
@@ -422,7 +422,7 @@ export default function Header() {
         localStorage.removeItem('token');
         setUser(null);
         setIsMobileMenuOpen(false);
-        window.location.href = 'https://smartprep.live/login';
+        window.location.href = 'https://www.smartprep.live/login';
     };
 
     // Student Navigation Items
@@ -522,7 +522,7 @@ export default function Header() {
                                                             <div className="flex-1 overflow-hidden">
                                                                 <h4 className="text-sm font-bold text-gray-900 truncate flex items-center gap-1">
                                                                     {resultUser.name}
-                                                                    <span className="text-[10px] text-gray-400 font-normal ml-1">• {resultUser.role === 'alumni' ? 'Alumni' : resultUser.role === 'student' ? 'Student' : 'Member'}</span>
+                                                                    <span className="text-[10px] text-gray-400 font-normal ml-1">â€¢ {resultUser.role === 'alumni' ? 'Alumni' : resultUser.role === 'student' ? 'Student' : 'Member'}</span>
                                                                 </h4>
                                                                 <p className="text-xs text-gray-500 truncate">{resultUser.headline || resultUser.role}</p>
                                                             </div>
@@ -589,7 +589,7 @@ export default function Header() {
                     {/* Right Section: Profile (desktop only) + Hamburger (mobile only) */}
                     <div className="flex items-center h-full">
 
-                        {/* User Profile / Login Button — desktop only */}
+                        {/* User Profile / Login Button â€” desktop only */}
                         {user ? (
                             <div className="relative h-full flex items-center hidden md:flex" ref={profileRef}>
                                 <button
@@ -659,7 +659,7 @@ export default function Header() {
                             <div className="hidden sm:flex flex-col justify-center items-center h-full px-2">
                                 <div className="flex items-center space-x-2">
                                      <button
-                                         onClick={() => window.location.href = 'https://smartprep.live/login'}
+                                         onClick={() => window.location.href = 'https://www.smartprep.live/login'}
                                          className="text-[#C7D1D8] hover:bg-[#ffffff1a] hover:text-white px-3 py-1.5 rounded font-semibold text-sm transition-colors"
                                      >
                                          Sign in
@@ -674,7 +674,7 @@ export default function Header() {
                             </div>
                         )}
 
-                        {/* Hamburger Toggle — mobile only */}
+                        {/* Hamburger Toggle â€” mobile only */}
                         <button
                             className="md:hidden ml-2 p-1 text-gray-300 hover:text-white transition-colors duration-200"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -749,7 +749,7 @@ export default function Header() {
                             ) : (
                                 <div className="space-y-4 pt-4 pb-2 flex flex-col px-4">
                                     <button
-                                        onClick={() => { window.location.href = 'https://smartprep.live/login'; setIsMobileMenuOpen(false); }}
+                                        onClick={() => { window.location.href = 'https://www.smartprep.live/login'; setIsMobileMenuOpen(false); }}
                                         className="w-full text-center py-2.5 rounded-full border border-white text-white font-semibold transition-colors"
                                     >
                                         Sign in

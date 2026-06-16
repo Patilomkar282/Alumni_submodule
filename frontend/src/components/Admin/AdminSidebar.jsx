@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import {
     LayoutDashboard,
@@ -51,7 +51,7 @@ export default function AdminSidebar() {
 
     const handleLogout = () => {
         localStorage.removeItem('userInfo');
-        window.location.href = 'https://smartprep.live/login';
+        window.location.href = 'https://www.smartprep.live/login';
     };
 
     return (
@@ -122,3 +122,4 @@ export default function AdminSidebar() {
         </aside>
     );
 }
+
