@@ -51,7 +51,7 @@ export default function AdminSidebar() {
 
     const handleLogout = () => {
         localStorage.removeItem('userInfo');
-        window.location.href = 'http://localhost:5174/login';
+        window.location.href = 'https://www.smartprep.live/login';
     };
 
     return (
