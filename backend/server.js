@@ -58,6 +58,10 @@ const envOrigins = (process.env.FRONTEND_URL || '')
 const allowedOrigins = [
     'http://localhost:5173',
     'http://localhost:3000',
+    'https://interview.smartprep.live',
+    'https://alumini.smartprep.live',
+    'https://gd.smartprep.live',
+    'https://www.smartprep.live',
     ...envOrigins,
 ].filter(Boolean);
 
