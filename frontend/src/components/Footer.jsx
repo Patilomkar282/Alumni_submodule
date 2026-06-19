@@ -248,15 +248,7 @@ export default function Footer() {
         </div>
       )}
 
-      {/* ── 2. Platform Stats Strip ───────────────────────────────────────── */}
-      <div className="border-b border-slate-800/60">
-        <div className="max-w-7xl mx-auto px-6 py-7 grid grid-cols-2 sm:grid-cols-4 gap-6 divide-x divide-slate-800/40">
-          <StatPill icon={Users}         value="500+"  label="Alumni Mentors"   delay={0}    />
-          <StatPill icon={GraduationCap} value="2000+" label="Students"         delay={0.1}  />
-          <StatPill icon={CalendarCheck} value="1800+" label="Sessions Booked"  delay={0.2}  />
-          <StatPill icon={Star}          value="4.8★"  label="Avg Mentor Rating" delay={0.3} />
-        </div>
-      </div>
+
 
       {/* ── 3. Main Footer Grid ───────────────────────────────────────────── */}
       <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10">
