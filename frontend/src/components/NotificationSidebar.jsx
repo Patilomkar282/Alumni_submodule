@@ -7,6 +7,7 @@ export default function NotificationSidebar({
     onClose,
     notifications,
     onMarkAsRead,
+    onMarkAllAsRead,
     onAcceptInvite,
     onDeclineInvite,
     onAcceptConnection,
@@ -62,12 +63,22 @@ export default function NotificationSidebar({
                                     </p>
                                 </div>
                             </div>
-                            <button
-                                onClick={onClose}
-                                className="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500 hover:text-gray-700"
-                            >
-                                <X className="w-5 h-5" />
-                            </button>
+                            <div className="flex items-center gap-2">
+                                {notifications.some(n => !n.read) && (
+                                    <button
+                                        onClick={onMarkAllAsRead}
+                                        className="text-xs font-semibold text-indigo-600 hover:text-indigo-800 transition-colors bg-indigo-50 px-3 py-1.5 rounded-full"
+                                    >
+                                        Mark all as read
+                                    </button>
+                                )}
+                                <button
+                                    onClick={onClose}
+                                    className="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500 hover:text-gray-700"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
                         </div>
 
                         {/* Content */}

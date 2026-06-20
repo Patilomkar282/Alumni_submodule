@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     User,
@@ -123,6 +123,21 @@ export default function Header() {
             }
         } catch (error) {
             console.error("Error marking notification as read:", error);
+        }
+    };
+
+    const markAllAsRead = async () => {
+        try {
+            const token = user?.token || JSON.parse(localStorage.getItem('userInfo'))?.token;
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/notifications/read-all`, {
+                method: 'PUT',
+                headers: { 'Authorization': `Bearer ${token}` }
+            });
+            if (res.ok) {
+                setNotifications(notifications.map(n => ({ ...n, read: true })));
+            }
+        } catch (error) {
+            console.error("Error marking all notifications as read:", error);
         }
     };
 
@@ -773,6 +788,7 @@ export default function Header() {
                 onClose={() => setIsNotificationOpen(false)}
                 notifications={notifications}
                 onMarkAsRead={markAsRead}
+                onMarkAllAsRead={markAllAsRead}
                 onAcceptInvite={handleAcceptInvite}
                 onDeclineInvite={handleDeclineInvite}
                 onAcceptConnection={handleAcceptConnection}
