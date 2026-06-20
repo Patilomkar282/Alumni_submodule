@@ -113,7 +113,7 @@ export default function PrivacyPolicy() {
                 Instituted by MMCOE Administration
               </div>
               <Link 
-                to="/signup" 
+                to="/home" 
                 className={`inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-semibold rounded-xl text-white transition-all duration-200 w-full sm:w-auto ${
                   agreed 
                     ? 'bg-emerald-600 hover:bg-emerald-700 hover:shadow-lg hover:shadow-emerald-200 cursor-pointer pointer-events-auto' 
@@ -125,7 +125,7 @@ export default function PrivacyPolicy() {
                   }
                 }}
               >
-                Acknowledge & Return to Sign Up
+                Acknowledge & Return to Home
               </Link>
             </div>
           </div>
