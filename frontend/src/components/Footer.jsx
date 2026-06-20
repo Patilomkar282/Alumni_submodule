@@ -6,7 +6,7 @@ import {
   Phone,
   MapPin,
   Facebook,
-  Twitter,
+  Youtube,
   Linkedin,
   Instagram,
   ArrowRight,
@@ -169,25 +169,25 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: Facebook,
-      href: "#", // ← Replace with real URL
+      href: "https://www.facebook.com/mmcoepunemh",
       label: "Facebook",
       hoverClass: "hover:bg-blue-600",
     },
     {
-      icon: Twitter,
-      href: "#", // ← Replace with real URL
-      label: "Twitter / X",
-      hoverClass: "hover:bg-sky-500",
+      icon: Youtube,
+      href: "https://www.youtube.com/channel/UC4ZIkZoKmyoKDNypTSM-Eqw",
+      label: "YouTube",
+      hoverClass: "hover:bg-red-600",
     },
     {
       icon: Linkedin,
-      href: "#", // ← Replace with real URL
+      href: "https://www.linkedin.com/school/mmcoepune",
       label: "LinkedIn",
       hoverClass: "hover:bg-blue-700",
     },
     {
       icon: Instagram,
-      href: "#", // ← Replace with real URL
+      href: "https://www.instagram.com/mmcoepune?igsh=MWM4b25kNDMwZWUwMA%3D%3D&utm_source=ig_contact_invite",
       label: "Instagram",
       hoverClass: "hover:bg-gradient-to-br hover:from-pink-500 hover:to-orange-400",
     },
